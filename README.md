@@ -5,6 +5,8 @@ It does not stop at suggestions. It writes code, runs it, inspects results, and 
 
 This project is built using **Groq LLMs**, **LangChain**, and the **ReAct (Reason + Act)** agent pattern.
 
+![alt text](https://github.com/malshehhi95/Executable-Reasoner/blob/main/ER.png?raw=true)
+
 ---
 
 ## Why Executable Reasoner exists
