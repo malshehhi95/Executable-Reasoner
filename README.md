@@ -130,7 +130,29 @@ You can then issue multi-step instructions interactively.
 The agent will write files, run them, and refine results automatically.
 
 ---
+## 3 complicated multi-step sample prompts (copy/paste)
 
+### Prompt 1: Build a full mini pipeline with validation + report
+“Create a complete mini data pipeline in the workspace:
+1) Generate a synthetic CSV dataset for student performance with columns (student_id, program, attendance_rate, midterm, final, passed).
+2) Write `clean_validate.py` that loads the CSV, validates types/ranges, fixes common issues, and outputs `clean.csv` plus `validation_report.json`.
+3) Write `analysis_report.py` that reads `clean.csv` and produces `report.md` with key stats, pass rates by program, and correlation notes.
+4) Run both scripts, show outputs, and list the workspace files at the end.”
+
+### Prompt 2: Write a CLI tool + unit tests + bug fixing loop
+“Build a CLI tool called `log_sleuth.py` that:
+1) Generates a sample `app.log` with mixed INFO/WARN/ERROR lines and fake request ids.
+2) Parses the log and outputs `summary.json` with counts per level, top 5 recurring error messages, and a timeline bucketed per minute.
+3) Add a `--filter LEVEL` option and `--since-minutes N` option.
+4) Create `test_log_sleuth.py` with at least 6 tests using `unittest`.
+5) Run tests, fix failures until all pass, then show the final summary output.”
+
+### Prompt 3: Build a local codebase indexer (like a tiny IDE brain)
+“Inside the workspace:
+1) Create 5 small Python modules (utilities, math, strings, io, main) with several functions and classes.
+2) Write `indexer.py` that walks the workspace, parses all `.py` files using `ast`, extracts functions/classes/docstrings, and writes `code_index.json`.
+3) Write `search_index.py` that loads `code_index.json` and supports keyword search plus ‘find functions that have more than N args’.
+4) Run indexer, then run 3 different searches and show results.”
 ## Available tools
 
 Executable Reasoner currently includes:
