@@ -193,12 +193,6 @@ Executable Reasoner follows three principles:
 
 If a result cannot be executed and inspected, it is not considered complete.
 
----
-
-## License
-
-Choose an appropriate open-source license (MIT is common)  
-and add a `LICENSE` file before publishing.
 
 ---
 
